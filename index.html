@@ -1,99 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>Hello World!</title>
-    
-
-
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-    <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" />
-
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- Import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <meta charset="utf-8">
+    <title>3D Model (glTF)</title>
+    <meta name="description" content="3D Model (glTF) — A-Frame">
+    <script src="../../../dist/aframe-master.js"></script>
+  </head>
   <body>
-    <!--
-      This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
-      Each element is defined using tags, with < and > indicating where each one opens and closes
-      There are elements for sections of the page, images, text, and more
-      The elements include attributes referenced in the CSS for the page style
-    -->
+    <a-scene background="color: #ECECEC">
+      <a-assets>
+        <a-asset-item id="tree" src="../../assets/models/tree2.glb"></a-asset-item>
+      </a-assets>
 
-    <!-- The wrapper and content divs set margins and positioning -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <!-- This is the start of content for our page -->
-        <h1 class="title">Hello World!</h1>
-<head>Data Visualization</head>
-    <iframe title="U.S. Women Eliminated at World Championships and Olympics, 2008—2021" aria-label="Interactive line chart" id="datawrapper-chart-NtrS1" src="https://datawrapper.dwcdn.net/NtrS1/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="657"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
-        <img
-          src=https://s3.amazonaws.com/external_clips/users/244102/medium/headshot.JPG?1608482407
-        />
-        <!-- Instructions on using this project -->
-        <div class="instructions">
-          <h2>
-            Read about my story here
-          </h2>
-          <p>
-            The above <strong>data visualization</strong> represents work I did last term in the Data-Driven Journalism Class. I analyzed data from the Fédération Internationale de Gymnastique about a rule in artistic gymnastics that limits the amount of qualifying finalists in individual finals to 2-per-country. The headline for the story was: <strong>Is this Gymnastics Rule Anti-American?</strong> The two-per-country rule is supposed to make gymnastics fairer. But is it really punishing greatness?
-          </p>
-          <p> From the project: "On the surface, it appears that the two-per-country rule exists to punish the dominant American women’s program, gifting Cold War rivals like China and Russia the chance to compete even if their gymnasts rank lower than those from the U.S. The data, however, doesn’t support this theory—at least not until recent years, when [Simone] Biles burst onto the elite competition scene in 2013."
-          </p>
-          </ul>
-         <a href=https://ameliamerrill.contently.com> Here is my website where you can read all the stories I publish on film, TV, theatre, Jewish culture, and women in media for a variety of clients.
-        </div>
-      </div>
-    </div>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
+      <a-gltf-model src="#tree" rotation="0 45 0"></a-gltf-model>
+      <a-entity position="0 0 4">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
   </body>
 </html>
